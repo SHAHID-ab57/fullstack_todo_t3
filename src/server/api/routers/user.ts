@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
-import bcrypt from "bcryptjs";
+const bcrypt = require("bcryptjs");
+
 
 export const userRouter = createTRPCRouter({
   // Create a new user (password is hashed before saving)
